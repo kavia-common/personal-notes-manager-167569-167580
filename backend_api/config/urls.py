@@ -23,7 +23,10 @@ from django.views.decorators.csrf import csrf_exempt
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    # Existing API endpoints
     path('api/', include('api.urls')),
+    # Notes API endpoints under /api/notes/
+    path('api/', include('notes.urls')),
 ]
 
 schema_view = get_schema_view(
